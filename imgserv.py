@@ -47,7 +47,7 @@ def index():
 @get('/images')
 def index():
     response.content_type='application/json'
-    return json.dumps(map(manifest_for,get_images()))
+    return json.dumps(list(map(manifest_for,get_images())))
 
 
 @get('/images/:uuid')
